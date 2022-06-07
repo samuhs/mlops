@@ -2,3 +2,15 @@
 #
 # Documentation for this file format can be found in "The Data Catalog"
 # Link: https://kedro.readthedocs.io/en/stable/data/data_catalog.html
+
+challenge_train:
+  type: pandas.CSVDataSet
+  filepath: data/04_feature/challenge_train.csv
+
+challenge_train_process:
+  type: pandas.CSVDataSet
+  filepath: data/04_model_input/challenge_train_process.csv
+
+challenge_test:
+  type: pandas.CSVDataSet
+  filepath: data/04_feature/challenge_test.csv

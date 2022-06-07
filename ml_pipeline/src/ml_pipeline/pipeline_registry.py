@@ -3,6 +3,7 @@ from typing import Dict
 
 from kedro.pipeline import Pipeline, pipeline
 
+from ml_pipeline.pipelines import training as t
 
 def register_pipelines() -> Dict[str, Pipeline]:
     """Register the project's pipelines.
@@ -10,4 +11,8 @@ def register_pipelines() -> Dict[str, Pipeline]:
     Returns:
         A mapping from a pipeline name to a ``Pipeline`` object.
     """
-    return {"__default__": pipeline([])}
+    training = t.create_pipeline()
+    
+    return {"__default__": training,
+            "training": training
+    }
