@@ -1,0 +1,15 @@
+artifact_uri: file:///home/samuel/Documentos/Untitled%20Folder/ml_pipeline/mlops_lu/1/7907cb4726494b039937a3018c114647/artifacts
+end_time: 1654603258341
+entry_point_name: ''
+experiment_id: '1'
+lifecycle_stage: active
+name: ''
+run_id: 7907cb4726494b039937a3018c114647
+run_uuid: 7907cb4726494b039937a3018c114647
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1654603258290
+status: 3
+tags: []
+user_id: samuel

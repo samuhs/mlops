@@ -1,0 +1,3 @@
+Index(['mana', 'attack', 'health', 'creature', 'god power', 'spell', 'weapon',
+       'death', 'deception', 'light', 'magic', 'nature', 'neutral', 'war'],
+      dtype='object')

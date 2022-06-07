@@ -14,3 +14,7 @@ challenge_train_process:
 challenge_test:
   type: pandas.CSVDataSet
   filepath: data/04_feature/challenge_test.csv
+
+logistic_model:
+    type: kedro_mlflow.io.models.MlflowModelLoggerDataSet
+    flavor: mlflow.sklearn

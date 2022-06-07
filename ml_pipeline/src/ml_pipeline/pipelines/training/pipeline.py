@@ -18,7 +18,7 @@ def create_pipeline(**kwargs) -> Pipeline:
             node(
                 logistic_training,
                 inputs='challenge_train_process',
-                outputs=None,
+                outputs='logistic_model',
                 name="logistic_training_node",
             ),
         ]

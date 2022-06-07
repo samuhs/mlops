@@ -1,0 +1,4 @@
+artifact_location: file:///home/samuel/Documentos/Untitled%20Folder/ml_pipeline/mlops_lu/1
+experiment_id: '1'
+lifecycle_stage: active
+name: ml_pipeline
