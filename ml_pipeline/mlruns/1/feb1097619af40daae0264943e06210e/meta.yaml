@@ -1,0 +1,15 @@
+artifact_uri: file:///home/samuel/Documentos/Untitled%20Folder/ml_pipeline/mlruns/1/feb1097619af40daae0264943e06210e/artifacts
+end_time: 1654628962472
+entry_point_name: ''
+experiment_id: '1'
+lifecycle_stage: active
+name: ''
+run_id: feb1097619af40daae0264943e06210e
+run_uuid: feb1097619af40daae0264943e06210e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1654628960473
+status: 3
+tags: []
+user_id: samuel
