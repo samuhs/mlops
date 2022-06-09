@@ -62,6 +62,10 @@ E em seguida criar o container com:
 
 `docker run  --name fast_api -p 80:80 fast_api`
 
+Para acessar a documentação das rotas desta API basta colocar no navegador 
+
+`localhost/docs`
+
 Por fim para executar os testes da api basta estar dentro da pasta fast_api e rodar o comando:
 
 `pytest`
