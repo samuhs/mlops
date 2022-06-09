@@ -8,6 +8,8 @@ from sklearn import metrics
 from sklearn.metrics import confusion_matrix,accuracy_score
 from sklearn.metrics import classification_report
 
+import os
+
 class LogisticModel:
 
     def __init__(self) -> None:
@@ -37,7 +39,14 @@ class LogisticModel:
 
         print(classification_report(y_test, y_pred))
 
-        return self.logistic_regression
+        os.environ["AWS_DEFAULT_REGION"] = "eu-west-3"
+        os.environ["AWS_REGION"] = "eu-west-3"
+        os.environ["AWS_ACCESS_KEY_ID"] = "admin"
+        os.environ["AWS_SECRET_ACCESS_KEY"] = "adminadmin"
+        os.environ["MLFLOW_S3_ENDPOINT_URL"] = "http://localhost:9020"
+        mlflow.sklearn.log_model(self.logistic_regression, "modelo")
+
+        return True
     
     def apply_logistic(self,dataframe):
         pred = self.logistic_regression.predict(dataframe)

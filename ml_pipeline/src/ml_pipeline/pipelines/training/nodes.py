@@ -16,6 +16,6 @@ def process_dataframe(dataframe: pd.DataFrame):
 def logistic_training(dataframe: pd.DataFrame):
     logistic = LogisticModel()
 
-    logistic_model = logistic.train_logistic(dataframe, 'strategy')
+    logistic.train_logistic(dataframe, 'strategy')
 
-    return logistic_model
+    return True

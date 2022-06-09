@@ -17,7 +17,7 @@
 # credentials: mlflow_credentials
 
 server:
-  mlflow_tracking_uri: http://127.0.0.1:5000 
+  mlflow_tracking_uri: http://localhost:5000/
   stores_environment_variables: {} # any valid mlflow variables either for backend store or artifact store (e.g. MLFLOW_S3_ENDPOINT_URL), see: https://www.mlflow.org/docs/latest/tracking.html#amazon-s3-and-s3-compatible-storage
   credentials: null  # must be a valid key in credentials.yml which refers to a dict of sensituve mlflow environment variables (password, tokens...)
 
@@ -51,4 +51,4 @@ tracking:
 
 ui:
   port: "5000" # the port to use for the ui. Use mlflow default with 5000.
-  host: "127.0.0.1"  # the host to use for the ui. Use mlflow efault of "127.0.0.1".
+  host: "localhost"  # the host to use for the ui. Use mlflow efault of "127.0.0.1".
