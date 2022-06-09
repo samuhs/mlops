@@ -1,9 +1,0 @@
-1- Instalar dependendo do kedro que estao contidas em ml_pipeline/src/requiriment.txt
-2- Start no docker contendo mlflow server em mlflow_docker-compose-master
-    Comando: docker-compose up
-    mlflow acessavel em : http://localhost:5000
-3- ativar fast-Api em fast_api
-    Antes de ativar dentro do arquivo app/main.py trocar <seu_ip> pelo ip da sua maquina
-    Entao ativar o docker com:
-        docker build -t fast_api .
-        docker run  --name fast_api -p 80:80 fast_api

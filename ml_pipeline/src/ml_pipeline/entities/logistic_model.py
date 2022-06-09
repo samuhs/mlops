@@ -17,7 +17,16 @@ class LogisticModel:
 
         pass
 
-    def train_logistic(self, dataframe: pd.DataFrame, class_column: str):
+    def train_logistic(self, dataframe: pd.DataFrame, class_column: str)-> bool:
+        """Função responsavel por realizar o treinamento do modelo
+
+        Args:
+            dataframe (pd.DataFrame): dataframe processado que será utilizado para treinamento
+            class_column (str): coluna indicando os labels de classficação
+
+        Returns:
+            bool: _description_
+        """
 
         y = dataframe[class_column]
         X = dataframe.drop(class_column, axis = 1)
@@ -47,10 +56,6 @@ class LogisticModel:
         mlflow.sklearn.log_model(self.logistic_regression, "modelo")
 
         return True
-    
-    def apply_logistic(self,dataframe):
-        pred = self.logistic_regression.predict(dataframe)
-        return pred
 
     def log_metrics(self, conf_matrix, acurracy):
 
