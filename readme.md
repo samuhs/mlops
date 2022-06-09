@@ -25,11 +25,11 @@ O projeto pode ser dividio em tres modulos principais, sendo cada um deles separ
 
 Neste projeto o MLflow foi desenvolvido dentro de um docker para simular como se ele estivesse dentro de um ambiente externo ao localhost do projeto, o projeto desse servidor de mlflow pode ser encontrado em [https://github.com/raphaelauv/mlflow_docker-compose](#https://github.com/raphaelauv/mlflow_docker-compose). Para executar basta entrar na pasta mlflow_docker-compose-master e rodar o comando:
 
-docker-compose up
+`docker-compose up`
 
 Depois disso a UI do mlflow estará disponivel em:
 
-http://localhost:5000/
+`http://localhost:5000/`
 
 
 
@@ -41,30 +41,30 @@ Primeiramente utilizar o kedro neste projeto basta verificar se as dependencias 
 
 Caso deseja ter uma visualização interativa dos Nodes, pipelines e databases contidos dentro do projeto kedro, basta instalar o kedro-viz com:
 
-pip install kedro-viz
+`pip install kedro-viz`
 
 Em seguida ativar ele com o comando: 
 
-kedro viz
+`kedro viz`
 
 Kedro tambem gera uma documentação automatica das funções, isso pode ser lido executando o comando:
 
-kedro docs
+`kedro docs`
 
 
 #### FastApi
 
 Por fim com os dois modulo executados para utilizar FastApi é necessario um passo antes de rodar seu dockerfile, dentro do arquivo app/main.py é necessairo substitui http://<SEU_IP>:5000 por seu IP na região indicada. Isto é necessario para que dessa forma o Docker da FastApi possa se comunicar corretamente com o Docker do MlFlow. Com isso feito basta buildar a imagem com :
 
-docker build -t fast_api .
+`docker build -t fast_api .`
 
 E em seguida criar o container com:
 
-docker run  --name fast_api -p 80:80 fast_api
+`docker run  --name fast_api -p 80:80 fast_api`
 
 Por fim para executar os testes da api basta estar dentro da pasta fast_api e rodar o comando:
 
-pytest
+`pytest`
 
 #### Notas do Projeto
 
